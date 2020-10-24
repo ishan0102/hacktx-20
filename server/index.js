@@ -14,8 +14,8 @@ app.use(
 app.use(cors());
 
 // Bring in routes
-// const speech = require("./routes/speech");
-// app.use("/api/speech", speech);
+const speech = require("./routes/speech");
+app.use("/api/speech", speech);
 
 // Error response
 app.use((err, req, res, next) => {
