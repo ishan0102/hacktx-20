@@ -1,0 +1,23 @@
+
+    [
+        {
+            "id": 1,
+            "criteria": "Eye contact",
+            "message": "maintain more eye contact"
+        },
+        {
+            "id": 2,
+            "criteria": "Talking speed",
+            "message": "slow down"
+        },
+        {
+            "id": 3,
+            "criteria": "Body language",
+            "message": "use more gestures and open yourself up"
+        },
+        {
+            "id": 4,
+            "criteria": "Facial expressions",
+            "message": "smile more!"
+        }
+    ]

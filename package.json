@@ -27,8 +27,12 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "@progress/kendo-file-saver": "^1.1.0",
+    "axios": "^0.21.0",
     "material-ui": "^0.20.2",
     "react-video-recorder": "^3.17.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.0",
     "styled-components": "^5.2.0"
   }
 }
