@@ -5,6 +5,9 @@ import { AppBar, Toolbar, Typography, Button, IconButton } from '@material-ui/co
 import MenuIcon from '@material-ui/icons/Menu';
 import VideoRecorder from 'react-video-recorder'
 
+
+var MyVideoBlob;
+
 class App extends Component {
   render() {
     // const { classes } = this.props;
@@ -28,6 +31,7 @@ class App extends Component {
                 <VideoRecorder
                     onRecordingComplete={(videoBlob) => {
                         console.log('videoBlob', videoBlob)
+                        MyVideoBlob = videoBlob;
                     }} 
                 />
             </div>
