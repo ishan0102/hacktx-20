@@ -5,20 +5,18 @@ import { AppBar, Toolbar, Typography, Button, IconButton } from '@material-ui/co
 import MenuIcon from '@material-ui/icons/Menu';
 import Video from './components/Video.js';
 
+import { createMuiTheme } from '@material-ui/core/styles';
+
 class App extends Component {
   render() {
     return (
       <div className="app">
-        <header className="app-header">
-            <AppBar position="fixed">
-                <Toolbar>
-                    <IconButton edge="start" className="icon" color="inherit" aria-label="menu">
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" className="typ">
-                        News
-                    </Typography>
-                    <Button color="inherit">Login</Button>
+        <header>
+            <AppBar color="primary" position="fixed">
+                <Toolbar className="toolbar">
+                    <a href="/" className="greeting">
+                        Speaking Analyzer
+                    </a>
                 </Toolbar>
             </AppBar>
         </header>

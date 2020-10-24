@@ -9,8 +9,37 @@
     background-color: #faf3dd;
 }
 
-.app-header {
+.toolbar {
+    background-color: #3f51b5;
+    justify-content: center;
+    height: 6em;
+    
+}
 
+.greeting {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.greeting:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    width: 0;
+}
+
+.greeting:hover:after { 
+    width: 100%;
+    left: 0; 
 }
 
 .video-recorder {
