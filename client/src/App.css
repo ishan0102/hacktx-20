@@ -1,14 +1,22 @@
-.App {
+.app {
   text-align: center;
+  min-height: 100vh;
+  background-color: #282c34;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.video-recorder {
+    background-color: "white";
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    max-width: 50vh;
 }

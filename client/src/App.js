@@ -9,8 +9,8 @@ class App extends Component {
   render() {
     // const { classes } = this.props;
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="app">
+        <header className="app-header">
             <AppBar position="fixed">
                 <Toolbar>
                     <IconButton edge="start" className="icon" color="inherit" aria-label="menu">
@@ -24,11 +24,13 @@ class App extends Component {
             </AppBar>
         </header>
         <body>
-            <VideoRecorder
-                onRecordingComplete={(videoBlob) => {
-                    console.log('videoBlob', videoBlob)
-                }} 
-            />
+            <div className="video-recorder">
+                <VideoRecorder
+                    onRecordingComplete={(videoBlob) => {
+                        console.log('videoBlob', videoBlob)
+                    }} 
+                />
+            </div>
         </body>
       </div>
     );
