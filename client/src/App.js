@@ -3,13 +3,10 @@ import React, { Component } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Toolbar, Typography, Button, IconButton } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu';
-import VideoRecorder from 'react-video-recorder'
-
-var MyVideoBlob;
+import Video from './components/Video.js';
 
 class App extends Component {
   render() {
-    // const { classes } = this.props;
     return (
       <div className="app">
         <header className="app-header">
@@ -27,11 +24,7 @@ class App extends Component {
         </header>
         <body>
             <div className="video-recorder">
-                <VideoRecorder
-                    onRecordingComplete={(videoBlob) => {
-                        MyVideoBlob = videoBlob;
-                    }} 
-                />
+                <Video/>
             </div>
         </body>
       </div>
