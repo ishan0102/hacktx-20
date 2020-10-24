@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express(); // generate an app object
 const PORT = process.env.PORT || 5000;
+const multer = require("multer");
 
 // Middleware
 app.use(bodyParser.json()); // telling the app that we are going to use json to handle incoming payload
@@ -16,8 +17,13 @@ app.use(cors());
 // Bring in routes
 const speech = require("./routes/speech");
 const text = require("./routes/text");
+const face = require("./routes/face");
+const video = require("./routes/video");
 app.use("/api/speech", speech);
 app.use("/api/text", text);
+app.use("/api/face", face);
+app.use("/api/video", video);
+
 
 // Error response
 app.use((err, req, res, next) => {
