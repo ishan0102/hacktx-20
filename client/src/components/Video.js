@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import VideoRecorder from 'react-video-recorder';
 
-
-var toWav = require('audiobuffer-to-wav');
 var MyVideoBlob;
 
 class Video extends Component {
@@ -18,6 +16,7 @@ class Video extends Component {
                     videoHandler();
                     audioHandler(videoBlob);
                 }} 
+                renderDisconnectedView={() => {}}
             />
         );
     }
