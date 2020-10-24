@@ -11,7 +11,7 @@ class Video extends Component {
                     console.log(videoBlob);
                     document.getElementById("feedback").style.display = "block";
                 }} 
-                renderDisconnectedView={() => {}}
+                //renderDisconnectedView={() => {}}
             />
         );
     }

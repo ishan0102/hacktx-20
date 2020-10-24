@@ -1,0 +1,13 @@
+
+    [
+        {
+            "id": 1,
+            "criteria": "eye contact",
+            "message": "maintain more eye contact"
+        },
+        {
+            "id": 2,
+            "criteria": "talking speed",
+            "message": "slow down"
+        }
+    ]
