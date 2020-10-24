@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import VideoRecorder from 'react-video-recorder';
 import createVideo from './VideoAPI.js'
-
-var MyVideoBlob;
+import Feedback from './Feedback.js'
 
 class Video extends Component {
     render() {
@@ -10,23 +9,12 @@ class Video extends Component {
             <VideoRecorder
                 onRecordingComplete={(videoBlob) => {
                     console.log(videoBlob);
-                    createVideo(videoBlob);
-                    MyVideoBlob = URL.createObjectURL(videoBlob);
+                    document.getElementById("feedback").style.display = "block";
                 }} 
                 renderDisconnectedView={() => {}}
             />
         );
     }
 }
-
-function videoHandler () {
-    var link = document.createElement("a"); // Or maybe get it from the current document
-    link.href = MyVideoBlob;
-    link.download = "aDefaultFileName.mp4";
-    link.innerHTML = "Click here to download the file";
-     document.body.appendChild(link);
-}
-
-
 
 export default Video;
