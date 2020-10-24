@@ -23,7 +23,7 @@ function listFeedback() {
                   return (
                     <List.Item  key={el.id}>
                       <List.Content>
-                        {el.criteria}: {el.message}
+                        <b>{el.criteria}:</b> {el.message}
                       </List.Content>
                     </List.Item>
                   );
