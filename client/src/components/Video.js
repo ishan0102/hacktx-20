@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import VideoRecorder from 'react-video-recorder';
-import createVideo from './VideoAPI.js'
+import saveVideo from './VideoAPI';
 
 var MyVideoBlob;
 
@@ -9,8 +9,8 @@ class Video extends Component {
         return (
             <VideoRecorder
                 onRecordingComplete={(videoBlob) => {
-                    console.log(videoBlob);
-                    createVideo(videoBlob);
+                    console.log(videoBlob.type);
+                    saveVideo(videoBlob);
                     MyVideoBlob = URL.createObjectURL(videoBlob);
                 }} 
             />
