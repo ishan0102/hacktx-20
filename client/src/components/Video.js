@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import VideoRecorder from 'react-video-recorder';
+import createVideo from './VideoAPI.js'
 
-
-var toWav = require('audiobuffer-to-wav');
 var MyVideoBlob;
 
 class Video extends Component {
@@ -11,12 +10,8 @@ class Video extends Component {
             <VideoRecorder
                 onRecordingComplete={(videoBlob) => {
                     console.log(videoBlob);
-                    var file = new Blob(
-                        [videoBlob],
-                        {"type" : "video\/mp4"});
+                    createVideo(videoBlob);
                     MyVideoBlob = URL.createObjectURL(videoBlob);
-                    videoHandler();
-                    audioHandler(videoBlob);
                 }} 
             />
         );
@@ -28,13 +23,9 @@ function videoHandler () {
     link.href = MyVideoBlob;
     link.download = "aDefaultFileName.mp4";
     link.innerHTML = "Click here to download the file";
-    link.click();
-    document.body.appendChild(link); // Or append it whereever you want
+     document.body.appendChild(link);
 }
 
-function audioHandler(audioBlob) {
-
-}
 
 
 export default Video;
