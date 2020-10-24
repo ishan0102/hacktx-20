@@ -1,25 +1,19 @@
 .app {
-  text-align: center;
-  min-height: 100vh;
-  background-color: #282c34;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    background-color: #faf3dd;
 }
 
 .app-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
 .video-recorder {
-    margin: auto;
-    padding-top: 10em;
-    flex-direction: column;
-    background-color: "white";
-    align-items: center;
-    justify-content: center;
-    min-height: 200vh;
-    max-width: 100vh;
+    width: 45em;
+    height: 30em;
 }
