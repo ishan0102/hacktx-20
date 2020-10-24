@@ -3,6 +3,7 @@ import VideoRecorder from 'react-video-recorder';
 import createVideo from './VideoAPI.js'
 import Feedback from './Feedback.js'
 
+
 class Video extends Component {
     render() {
         return (
@@ -10,8 +11,11 @@ class Video extends Component {
                 onRecordingComplete={(videoBlob) => {
                     console.log(videoBlob);
                     document.getElementById("feedback").style.display = "block";
-                }} 
-                //renderDisconnectedView={() => {}}
+                }}
+                onStopReplaying={() => {
+                    document.getElementById("feedback").style.display = "none";
+                }}
+                renderDisconnectedView={() => {}}
             />
         );
     }
