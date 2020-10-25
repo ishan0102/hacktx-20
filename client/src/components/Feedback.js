@@ -21,6 +21,8 @@ class Feedback extends Component {
 }
 
 function listFeedback() {
+  if (localStorage.getItem('person') == null) return null;
+
   var personImprove, moodImprove, voiceImprove = false;
   var personData = JSON.parse(localStorage.getItem('person'));
   personData.sort((a, b) => parseFloat(a.count) - parseFloat(b.count));
