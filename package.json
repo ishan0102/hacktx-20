@@ -9,7 +9,9 @@
     "client": "npm start --prefix client",
     "server": "npm run start --prefix server",
     "server-dev": "npm run dev --prefix server",
-    "dev": "concurrently \"npm run client\" \"npm run server-dev\""
+    "start": "concurrently \"npm run client\" \"npm run server-dev\"",
+    "run dev": "concurrently \"npm run client\" \"npm run server-dev\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -37,6 +39,7 @@
     "react-video-recorder": "^3.17.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.0",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.0",
+    "concurrently": "^5.3.0"
   }
 }

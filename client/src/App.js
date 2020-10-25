@@ -17,7 +17,7 @@ class App extends Component {
             <AppBar color="primary" position="fixed">
                 <Toolbar className="toolbar">
                     <a href="/" className="greeting">
-                        Speaking Analyzer
+                        NLP Speech Analysis
                     </a>
                 </Toolbar>
             </AppBar>
