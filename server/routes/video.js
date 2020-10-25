@@ -8,7 +8,7 @@ router.post("/save", upload.single('file'), (req, res) => {
   console.log(req.file.filename);
   refactorFile(req.file.path);
   return res.status(200).json({
-    fileName: "test.mp4"
+    fileName: req.file.path
   });
 });
 
