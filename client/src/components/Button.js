@@ -12,12 +12,12 @@ class Buttons extends Component {
 
 function submitButtons() {
     return <div>
-            <div class="clickable">
-                <button class="ui button" onClick={submit}>Send</button>
-                {/* <a class="spacer"></a> */}
-                {/* <button class="ui button" onClick={newRecording}>New Recording</button> */}
-            </div>
-            </div>
+        <div class="clickable">
+            <button class="ui button" onClick={submit}>Get Feedback</button>
+            {/* <a class="spacer"></a> */}
+            {/* <button class="ui button" onClick={newRecording}>New Recording</button> */}
+        </div>
+    </div>
 }
 
 function submit(){
