@@ -1,5 +1,5 @@
 # NLP Speech Analysis
-Created for HackTX 2020 by [Rishi Ponnekanti](https://www.linkedin.com/in/rishiponnekanti/), [Ishan Shah](https://www.linkedin.com/in/ishan0102/), [Michael Chen](https://www.linkedin.com/in/xige-michael-chen-7a4a45190/), [Timothy Situ](https://www.linkedin.com/in/timothy-situ-246569191/), and [Caleb Yu](https://www.linkedin.com/in/calebyu7/).
+Created for HackTX 2020 by [Rishi Ponnekanti](https://www.linkedin.com/in/rishiponnekanti/), [Ishan Shah](https://www.linkedin.com/in/ishan0102/), [Michael Chen](https://www.linkedin.com/in/xige-michael-chen-7a4a45190/), [Timothy Situ](https://www.linkedin.com/in/timothy-situ-246569191/), and [Caleb Yu](https://www.linkedin.com/in/calebyu7/). Check out our [Devpost](https://devpost.com/software/nlp-speech-analysis)!
 
 ## Inspiration
 In our engineering classes, we rarely get chances to practice our speaking and presentation skills. This makes it a lot harder to perform well in interviews since we lack a lot of the necessary experience. Add to that the lack of human interaction due to Covid-19 and it's nearly impossible for students to gather feedback on where they can improve their speaking.
