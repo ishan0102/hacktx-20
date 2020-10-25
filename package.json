@@ -4,12 +4,14 @@
   "description": "HackTX 2020 Project",
   "main": "index.js",
   "scripts": {
+    "dev": "node index.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "npm i --prefix client && npm i --prefix server",
     "client": "npm start --prefix client",
     "server": "npm run start --prefix server",
     "server-dev": "npm run dev --prefix server",
-    "dev": "concurrently \"npm run client\" \"npm run server-dev\""
+    "start": "concurrently \"npm run client\" \"npm run server-dev\""
   },
   "repository": {
     "type": "git",
@@ -30,9 +32,12 @@
     "@material-ui/icons": "^4.9.1",
     "@progress/kendo-file-saver": "^1.1.0",
     "axios": "^0.21.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "ffmpeg-extract-audio": "^1.0.2",
     "fluent-ffmpeg": "^2.1.2",
     "material-ui": "^0.20.2",
+    "multer": "^1.4.2",
     "react-video-recorder": "^3.17.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.0",

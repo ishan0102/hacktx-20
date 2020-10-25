@@ -4,6 +4,7 @@ const cors = require("cors");
 const app = express(); // generate an app object
 const PORT = process.env.PORT || 5000;
 const multer = require("multer");
+const path = require('path')
 
 // Middleware
 app.use(bodyParser.json()); // telling the app that we are going to use json to handle incoming payload
@@ -15,15 +16,14 @@ app.use(
 app.use(cors());
 
 // Bring in routes
-const speech = require("./routes/speech");
-const text = require("./routes/text");
-const face = require("./routes/face");
-const video = require("./routes/video");
-app.use("/api/speech", speech);
-app.use("/api/text", text);
-app.use("/api/face", face);
-app.use("/api/video", video);
-
+const speech = require("./server/routes/speech");
+const text = require("./server/routes/text");
+const face = require("./server/routes/face");
+const video = require("./server/routes/video");
+app.use("./server/api/speech", speech);
+app.use("./server/api/text", text);
+app.use("./server/api/face", face);
+app.use("./server/api/video", video);
 
 // Error response
 app.use((err, req, res, next) => {
@@ -32,6 +32,18 @@ app.use((err, req, res, next) => {
     message: err.message || "there was an error processing request",
   });
 });
+
+// Serve static files from the React frontend app
+app.use(express.static(path.join(__dirname, 'client/build')))
+
+app.get('/express_backend', (req, res) => {
+    res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
+});
+  
+// Anything that doesn't match the above, send back index.html
+app.get('*', (req, res) => {
+res.sendFile(path.join(__dirname + '/client/build/index.html'))
+})
 
 // Run server
 app.listen(PORT, () => {
