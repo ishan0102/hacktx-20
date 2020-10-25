@@ -13,12 +13,13 @@ var ffmpeg = require('fluent-ffmpeg');
  *    output - string, path of output file
  *    callback - function, node-style callback fn (error, result)        
  */
-function audio(input, output, callback) {
+async function audio(input, output, callback) {
     ffmpeg(input)
         .output(output)
         .on('end', function() {                    
             console.log('conversion ended');
             callback(null);
+            return Promise.resolve();
         }).on('error', function(err){
             console.log(err);
             callback(err);

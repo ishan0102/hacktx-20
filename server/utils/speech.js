@@ -8,7 +8,7 @@ module.exports = async (filename) => {
 
   // Configuration
   const encoding = 'LINEAR16';
-  const sampleRateHertz = 8000;
+  const sampleRateHertz = 48000;
   const languageCode = 'en-US';
 
   const config = {
