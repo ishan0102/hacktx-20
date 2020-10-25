@@ -10,7 +10,8 @@
     "server": "npm run start --prefix server",
     "server-dev": "npm run dev --prefix server",
     "start": "concurrently \"npm run client\" \"npm run server-dev\"",
-    "run dev": "concurrently \"npm run client\" \"npm run server-dev\""
+    "run dev": "concurrently \"npm run client\" \"npm run server-dev\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
