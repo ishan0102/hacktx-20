@@ -5,6 +5,7 @@ import { AppBar, Toolbar, Typography, Button, IconButton } from '@material-ui/co
 import MenuIcon from '@material-ui/icons/Menu';
 import Video from './components/Video';
 import Feedback from './components/Feedback'
+import Buttons from './components/Button'
 
 import { createMuiTheme } from '@material-ui/core/styles';
 
@@ -24,6 +25,9 @@ class App extends Component {
         <body>
             <div className="video-recorder">
                 <Video/>
+            </div>
+            <div className="buttons">
+                <Buttons />
             </div>
             <div className="feedback" id="feedback">
                 <Feedback/>

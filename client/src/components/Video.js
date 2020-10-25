@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { render } from 'react-dom'
 import VideoRecorder from 'react-video-recorder';
 import createVideo from './VideoAPI.js'
 import Feedback from './Feedback.js'
@@ -9,9 +10,8 @@ class Video extends Component {
             <VideoRecorder
                 onRecordingComplete={(videoBlob) => {
                     console.log(videoBlob);
-                    document.getElementById("feedback").style.display = "block";
                 }} 
-                //renderDisconnectedView={() => {}}
+                renderDisconnectedView={() => {}}
             />
         );
     }
