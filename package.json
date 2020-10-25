@@ -9,7 +9,8 @@
     "client": "npm start --prefix client",
     "server": "npm run start --prefix server",
     "server-dev": "npm run dev --prefix server",
-    "dev": "concurrently \"npm run client\" \"npm run server-dev\""
+    "start": "concurrently \"npm run client\" \"npm run server-dev\"",
+    "run dev": "concurrently \"npm run client\" \"npm run server-dev\""
   },
   "repository": {
     "type": "git",
