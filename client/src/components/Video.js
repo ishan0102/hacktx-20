@@ -9,8 +9,31 @@ class Video extends Component {
         return (
             <VideoRecorder
                 onRecordingComplete={async (videoBlob) => {
-                    const analysis = await analyzeVideo(videoBlob);
-                    console.log(analysis);
+                    await analyzeVideo(videoBlob, (analysis) => {
+                        var person = [];
+                        var mood = [];
+                        var voice = [];
+                        for (const word of analysis) {
+                            // Focus on Person, Mood, Voice
+                            var pos = word.partOfSpeech;
+                            if (pos.person != 'PERSON_UNKNOWN') {
+                                person.push(pos.person);
+                            }
+                            if (pos.mood != 'MOOD_UNKNOWN') {
+                                mood.push(pos.mood);
+                            }
+                            if (pos.voice != 'VOICE_UNKNOWN') {
+                                voice.push(pos.voice);
+                            }
+                        }
+                        const count = require('count-array-values');
+                        console.log(count(person));
+                        localStorage.setItem('person', JSON.stringify(count(person)));
+                        console.log(count(mood));
+                        localStorage.setItem('mood', JSON.stringify(count(mood)));
+                        console.log(count(voice));
+                        localStorage.setItem('voice', JSON.stringify(count(voice)));
+                    });
                 }}
                 onStopReplaying={() => {
                     document.getElementById("feedback").style.display = "none";

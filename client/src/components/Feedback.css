@@ -1,0 +1,19 @@
+.chartContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.personChart {
+    order: 0;
+    padding: 20px;
+}
+
+.moodChart {
+    order: 1;
+}
+
+.voiceChart {
+    order: 2;
+}

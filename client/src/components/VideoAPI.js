@@ -2,11 +2,11 @@ import axios from 'axios';
 
 const API_URL = "http://localhost:5000/api"
 
-async function analyzeVideo(file) {
+async function analyzeVideo(file, display) {
   var fd = new FormData();
   fd.append('file', file);
 
-  return axios.post(`${API_URL}/video/save`, fd, {
+  axios.post(`${API_URL}/video/save`, fd, {
     headers: {
       "content-type": "multipart/form-data"
     }
@@ -20,7 +20,9 @@ async function analyzeVideo(file) {
         text: res.data.transcription
       }).then(res => {
         console.log(res);
-        return res.data.analysis;
+        const analysis = res.data.analysis;
+        // Unpack and display
+        display(analysis);
       });
     });
   });
